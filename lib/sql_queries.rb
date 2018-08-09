@@ -7,7 +7,6 @@
 # Make sure each ruby method returns a string containing a valid SQL statement.
 
 def selects_the_titles_of_all_projects_and_their_pledge_amounts_alphabetized_by_name
-  # SELECT determines what is shown
 "SELECT title, SUM(amount)
   FROM projects
   JOIN pledges
@@ -16,7 +15,7 @@ def selects_the_titles_of_all_projects_and_their_pledge_amounts_alphabetized_by_
   ORDER BY projects.title ASC;"
 end
 
-# as you go down the query, less data. WHERE is like a filter.
+# as you go down the query, there's less data. WHERE is like a filter.
 
 def selects_the_user_name_age_and_pledge_amount_for_all_pledges_alphabetized_by_name
 "SELECT users.name, users.age, SUM(pledges.amount)
